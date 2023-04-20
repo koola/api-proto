@@ -1,4 +1,4 @@
-module github.com/surecomms/api-proto
+module github.com/koola/api-proto
 
 go 1.19
 

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "github.com/surecomms/auth-grpc/proto;authpb";
+
+service AuthService {
+  rpc SignIn(LoginRequest) returns (Tokens) {};
+  rpc SignOut(LogoutRequest) returns (LogoutResponse) {};
+}
+
+message LoginRequest {
+  string id = 1;
+}
+
+message LogoutRequest {
+  string refresh_token = 1;
+}
+
+message LogoutResponse {
+  string message = 1;
+}
+
+message Account {
+  string id = 1;
+}
+
+message Tokens {
+  string token = 1;
+  string refresh_token = 2;
+}

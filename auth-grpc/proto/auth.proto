@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package auth;
 
-option go_package = "github.com/surecomms/auth-grpc/proto;authpb";
+option go_package = "github.com/koola/auth-grpc/proto;authpb";
 
 service AuthService {
   rpc SignIn(LoginRequest) returns (Tokens) {};
